@@ -1,0 +1,23 @@
+{
+  "name": "social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon index.js"
+  },
+  "author": "seaniwe",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "md5": "^2.3.0",
+    "mongoose": "^6.3.0",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "remove": "^0.1.5",
+    "sequelize": "^6.19.0"
+  }
+}
