@@ -3,18 +3,20 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 
-module.exports = {    
+global.Op = Sequelize.Op
+
+module.exports = {
     sequelize: null,
     Models: {},
-    
-    async connect() {
-        this.sequelize = await new Sequelize('twitter', 'root', '', {
+
+    connect() {
+        this.sequelize = new Sequelize('twitter', 'root', '', {
             dialect: 'mysql',
             logging: false,
         })
-        this.loadModels();
-        console.log(`db conented`)
+        this.loadModels()
     },
+
     loadModels() {
         fs.readdirSync(__dirname).filter(file => {
             return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
@@ -24,5 +26,6 @@ module.exports = {
                 this.Models[model.name] = model;
             });
         this.sequelize.sync({ alter: true });
-    }
+    },
 }
+

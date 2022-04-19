@@ -1,0 +1,69 @@
+#Auth {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background: linear-gradient(176.8deg, #1C9AE8 -0.73%, #1679B5 108.69%);
+
+        .item {
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .right-content {
+        flex: 1;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .btns {
+            .btn {
+                width: 350px;
+                height: 45px;
+                border-radius: 30px;
+                margin-bottom: 10px;
+                transition: .2s;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .register {
+                background: #1C9AE8;
+                &:hover {
+                    background: #209fee;
+                    cursor: pointer;
+                }
+            }
+    
+            .login {
+                border: solid 3px #1C9AE8;
+                color: #000;
+                &:hover {
+                    background: #1678b541;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .left-content {
+            display: none;
+        }
+    }
+}

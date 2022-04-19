@@ -14,8 +14,9 @@ module.exports = {
         }
     },
     
-    setHeaders(app, express) {
+    setHeaders(app, express, router) {
         app.use(cors())
         app.use(express.json())
+        app.use('/ua', router)
     }
 }
